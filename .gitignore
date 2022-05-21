@@ -1,3 +1,4 @@
 **/**.ovpn
 **/**.crt
 .vscode/
+lists/
