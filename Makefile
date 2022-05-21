@@ -11,3 +11,7 @@ burpsuite: ## Run Burp suite
 
 cfr: ## Use cfr to decompile jar/apk
 	java -jar ${CTF_BIN}/cfr ${FILE}
+
+lists: ## Download lists
+	wget https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt -O lists/rockyou.txt
+	wget https://raw.githubusercontent.com/daviddias/node-dirbuster/master/lists/directory-list-2.3-medium.txt -O lists/directory-list-2.3-medium.txt

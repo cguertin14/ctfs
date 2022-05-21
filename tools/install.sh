@@ -24,6 +24,7 @@ wget https://www.benf.org/other/cfr/cfr-0.152.jar -O $CTF_BIN/cfr
 # Go packages
 go install github.com/fullstorydev/grpcurl/cmd/grpcurl@latest
 go install github.com/OJ/gobuster@latest
+go install github.com/ffuf/ffuf@latest
 
 # APT packages
 sudo apt install -y \
