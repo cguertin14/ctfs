@@ -8,3 +8,6 @@ msfconsole: ## Run msfconsole inside a docker container
 
 burpsuite: ## Run Burp suite
 	java -jar ${CTF_BIN}/burpsuite
+
+cfr: ## Use cfr to decompile jar/apk
+	java -jar ${CTF_BIN}/cfr ${FILE}
