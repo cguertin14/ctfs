@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+import "google/protobuf/empty.proto";
+
+service Morel {
+    rpc AuthenticationValidator(google.protobuf.Empty) returns (AuthenticationAnswer) {}
+}
+
+message AuthenticationAnswer {
+    bool authenticated = 1;
+    string flag = 2;
+}

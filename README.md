@@ -8,3 +8,9 @@ To install useful ctf tools, simply run this command:
 ```bash
 $ make
 ```
+
+## Useful links
+
+* [Cyberchef](https://gchq.github.io/CyberChef/)
+* [MD5 password cracker](https://crackstation.net/)
+* [SecLists](https://github.com/danielmiessler/SecLists)

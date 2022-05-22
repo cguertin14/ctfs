@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+import "google/protobuf/empty.proto";
+
+service Chanterelle {
+    rpc CAPrinter(google.protobuf.Empty) returns (CA) {}
+}
+
+message CA {
+    string ca = 1;
+    string flag = 2;
+}

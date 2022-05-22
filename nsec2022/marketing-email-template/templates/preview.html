@@ -1,0 +1,32 @@
+<html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>{{ .c }}</p>
+    <p>{{ .c.Params }}</p>
+
+    <p>FullPath {{ .c.FullPath }} </p>
+    <p>Test1 {{ .c.HandlerNames}}</p>
+    <p>Test2 {{ print .c.Request }}</p>
+    <p>Test2.1 {{ .c.Writer}}</p>
+    <p>Test2.2 {{ .c.Writer.WriteString "hi"}}</p>
+    <p>Test2.1 {{ print .c.ClientIP }}</p>
+
+    <pre> Adding routes 
+        {{ .c.RouterGroup.Static "/static" "/home/charles/Downloads" }}
+        {{ .c.engine.RouterGroup.StaticFile "favicon.io" "/home/charles/.zshrc" }}
+    </pre>
+
+    <p>Test6 {{ .c.File "/etc/passwd" }} </p>
+    <p>Test4 {{ .c.String 200 "%s" "hi"}}</p>
+    <p>Test5 {{ .c.Query }}</p>
+</body>
+
+</html>

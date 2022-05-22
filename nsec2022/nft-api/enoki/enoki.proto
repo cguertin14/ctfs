@@ -1,0 +1,146 @@
+syntax = "proto3";
+
+service Enoki {
+    rpc WalletCreator(WalletCredentials) returns (WalletCreated) {}
+    rpc UsernameChanger(UsernameChange) returns (UsernameChanged) {}
+    rpc WalletsViewer(CredentialsWrapper) returns (stream WalletInfo) {}
+
+    rpc NFTCreator(NFTCreate) returns (NFTCreated) {}
+    rpc MyNFTsViewer(CredentialsWrapper) returns (stream NFTInfo) {}
+
+    rpc NFTMinter(NFTMint) returns (NFTMinted) {}
+    rpc MintBuyer(MintBuy) returns (MintBought) {}
+    rpc MyMintsViewer(CredentialsWrapper) returns (stream MintInfo) {}
+    rpc MintsViewer(CredentialsWrapper) returns (stream MintInfo) {}
+
+    rpc MintBidder(MintBid) returns (MintBidded) {}
+    rpc BidCanceller(BidCancel) returns (BidCancelled) {}
+    rpc MyBidsViewer(CredentialsWrapper) returns (stream BidInfo) {}
+
+    rpc FlagPrinter(CredentialsWrapper) returns (FlagInfo) {}
+}
+
+//////////////////////////////////////////////////////////////////////////////
+// WALLET
+//////////////////////////////////////////////////////////////////////////////
+message WalletCredentials{
+    string username = 1;
+    string password = 2;
+}
+
+message CredentialsWrapper {
+    WalletCredentials creds = 1;
+}
+
+message WalletCreated {
+    int32 id_wallet = 1;
+    string message = 2;
+}
+
+message WalletInfo {
+    int32 id_wallet = 1;
+    string username = 2;
+    int32 shiitakoin = 3;
+    int32 level = 4;
+}
+
+message UsernameChange {
+    WalletCredentials creds = 1;
+    string username = 2;
+}
+
+message UsernameChanged {
+    string username = 1;
+    string message = 2;
+}
+
+//////////////////////////////////////////////////////////////////////////////
+// NFT
+//////////////////////////////////////////////////////////////////////////////
+message NFTCreate {
+    WalletCredentials creds = 1;
+    string name = 2;
+    string data = 3;
+}
+
+message NFTCreated {
+    int32 id_nft = 1;
+    string message = 2;
+}
+
+message NFTInfo {
+    int32 id_nft = 1;
+    int32 id_wallet = 2;
+    string name = 3;
+    string data = 4;
+}
+
+//////////////////////////////////////////////////////////////////////////////
+// NFT MINT
+//////////////////////////////////////////////////////////////////////////////
+message NFTMint {
+    WalletCredentials creds = 1;
+    int32 id_nft = 2;
+    int32 buyout = 3;
+}
+
+message NFTMinted {
+    int32 id_minted = 1;
+    string message = 2;
+}
+
+message MintInfo {
+    int32 id_minted = 1;
+    int32 id_nft = 2;
+    int32 id_wallet = 3;
+    string name = 4;
+    string data = 5;
+    int32 buyout = 6;
+    int32 active = 7;
+}
+
+message MintBuy {
+    WalletCredentials creds = 1;
+    int32 id_minted = 2;
+}
+
+message MintBought {
+    int32 id_nft = 1;
+    string message = 2;
+}
+
+//////////////////////////////////////////////////////////////////////////////
+// NFT BID
+//////////////////////////////////////////////////////////////////////////////
+message MintBid {
+    WalletCredentials creds = 1;
+    int32 id_minted = 2;
+    int32 bid = 3;
+}
+
+message MintBidded {
+    int32 id_bid = 1;
+    string message = 2;
+}
+
+message BidInfo {
+    int32 id_bid = 1;
+    int32 id_minted = 2;
+    int32 id_wallet = 3;
+    int32 bid = 4;
+    int32 active = 5;
+}
+
+message BidCancel {
+    WalletCredentials creds = 1;
+    int32 id_bid = 2;
+}
+
+message BidCancelled {
+    int32 id_bid = 1;
+    string message = 2;
+}
+
+message FlagInfo {
+    string flag = 1;
+}
