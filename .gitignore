@@ -2,3 +2,4 @@
 **/**.crt
 .vscode/
 lists/
+**/**/__pycache__
