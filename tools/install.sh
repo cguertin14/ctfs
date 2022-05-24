@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+# Debian files
+wget https://packages.microsoft.com/config/ubuntu/22.04/packages-microsoft-prod.deb
+sudo dpkg -i packages-microsoft-prod.deb
+rm packages-microsoft-prod.deb
+
 # APT packages
 sudo apt install -y \
 	nmap \
@@ -53,11 +58,6 @@ go install github.com/fullstorydev/grpcurl/cmd/grpcurl@latest
 go install github.com/OJ/gobuster@latest
 go install github.com/ffuf/ffuf@latest
 go install github.com/ropnop/kerbrute@latest
-
-# Debian files
-wget https://packages.microsoft.com/config/ubuntu/22.04/packages-microsoft-prod.deb
-sudo dpkg -i packages-microsoft-prod.deb
-rm packages-microsoft-prod.deb
 
 # Git repos
 git clone git@github.com:sherlock-project/sherlock.git $CTF_BIN/sherlock
