@@ -8,7 +8,7 @@ The following prerequisites will be installed automatically:
 * Go
 * Python 3
 
-We'll let you install `Java` however you want to.
+You can install `Java` however you want to.
 
 ## Install packages
 
