@@ -63,4 +63,4 @@ rm packages-microsoft-prod.deb
 git clone git@github.com:sherlock-project/sherlock.git $CTF_BIN/sherlock
 
 # Python packages
-pip3 install pywhat volatility3 web3 sherlock
+pip3 install pywhat volatility3 web3

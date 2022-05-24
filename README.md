@@ -2,6 +2,14 @@
 
 repository to store artifacts of CTFs I participate to
 
+## Prerequisites
+
+The following prerequisites will be installed automatically:
+* Go
+* Python 3
+
+We'll let you install `Java` however you want to.
+
 ## Install packages
 
 To install useful ctf tools, simply run this command:
