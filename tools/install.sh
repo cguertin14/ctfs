@@ -3,7 +3,12 @@
 # Create ctf bin directory
 CTF_BIN=$HOME/ctf/bin
 mkdir -p $CTF_BIN
-echo 'export PATH=$PATH:/home/charles/ctf/bin' >> $HOME/.zshrc
+
+# Add ctf bin to $PATH to .zshrc,
+# if not already there
+if ! grep -q 'export PATH=$PATH:$HOME/ctf/bin' $HOME/.zshrc; then
+	echo 'export PATH=$PATH:$HOME/ctf/bin' >> $HOME/.zshrc
+fi
 
 # Install IDA free
 if [ ! -f $CTF_BIN/idafree-7.7/ida64 ]
