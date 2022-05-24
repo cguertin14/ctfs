@@ -1,5 +1,16 @@
 #!/usr/bin/env bash
 
+# APT packages
+sudo apt install -y \
+	nmap \
+	hydra \
+	wireshark \
+	jq \
+	sqlmap \
+	ncat \
+	binwalk \
+	powershell
+
 # Create ctf bin directory
 CTF_BIN=$HOME/ctf/bin
 mkdir -p $CTF_BIN
@@ -50,20 +61,6 @@ rm packages-microsoft-prod.deb
 
 # Git repos
 git clone git@github.com:sherlock-project/sherlock.git $CTF_BIN/sherlock
-
-# APT packages
-sudo apt update
-sudo apt install -y \
-	python3 \
-	python3-pip \
-	nmap \
-	hydra \
-	wireshark \
-	jq \
-	sqlmap \
-	ncat \
-	binwalk \
-	powershell
 
 # Python packages
 pip3 install pywhat volatility3 web3 sherlock
