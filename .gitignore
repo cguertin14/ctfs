@@ -4,3 +4,4 @@
 .vscode/
 lists/
 **/**/__pycache__
+**/**/node_modules/
