@@ -1,5 +1,6 @@
 **/**.ovpn
 **/**.crt
+**/**.conf
 .vscode/
 lists/
 **/**/__pycache__

@@ -14,7 +14,8 @@ sudo apt install -y \
 	sqlmap \
 	ncat \
 	binwalk \
-	powershell
+	powershell \
+	checksec
 
 # Create ctf bin directory
 CTF_BIN=$HOME/ctf/bin
