@@ -1,0 +1,25 @@
+diff --git a/MSE.py b/MSE.py
+index fcb68da..affebd2 100644
+--- a/MSE.py
++++ b/MSE.py
+@@ -38,10 +38,7 @@ def check_word(text):
+         else:
+             v = v + [1]
+ 
+-    if 1 in v:
+-        return False
+-    else:
+-        return True
++    return sum(v) <= len(v)//10
+ 
+ def check_char(msg):
+     """
+@@ -250,7 +248,7 @@ class Bloc_C():
+             alex --> 4 caractères --> pair --> inverse --> exal
+         """
+ 
+-        if milieu(coded_msg)%2 == 1:
++        if len(coded_msg)%2 == 1:
+             coded_msg = coded_msg + choice(groupe_b)
+ 
+         a = coded_msg[:milieu(coded_msg)]
