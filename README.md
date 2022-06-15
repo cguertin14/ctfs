@@ -27,3 +27,7 @@ $ make
 
 * OSINT (chal descriptions) often contain useful info (passwords, usernames, etc.)
 * Always check a website's related sites (i.e.: github + gist) for info
+* Start a local TCP server, on port 3000 for instance (useful for reverse shells, pings, etc.):
+```bash
+nc -vnlp 3000
+```
