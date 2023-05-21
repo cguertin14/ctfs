@@ -1,0 +1,20 @@
+{
+    "PolicyVersion": {
+        "Document": {
+            "Version": "2012-10-17",
+            "Statement": [
+                {
+                    "Action": [
+                        "lambda:InvokeFunction",
+                        "lambda:GetFunction"
+                    ],
+                    "Resource": "arn:aws:lambda:us-east-1:421617763947:function:GOD_DebugEmployeeApp",
+                    "Effect": "Allow"
+                }
+            ]
+        },
+        "VersionId": "v1",
+        "IsDefaultVersion": true,
+        "CreateDate": "2023-05-19T00:35:42+00:00"
+    }
+}

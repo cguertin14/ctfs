@@ -1,0 +1,26 @@
+{
+    "UserName": "GOD_svc_iam",
+    "PolicyName": "GOD_IAM_Management",
+    "PolicyDocument": {
+        "Version": "2012-10-17",
+        "Statement": [
+            {
+                "Action": [
+                    "iam:ListRoles",
+                    "iam:ListPolicies",
+                    "iam:ListPolicyVersion",
+                    "iam:ListRolePolicies",
+                    "iam:ListAttachedRolePolicies",
+                    "iam:ListAttachedUserPolicies",
+                    "iam:ListAttachedGroupPolicies",
+                    "iam:GetPolicy",
+                    "iam:GetPolicyVersion",
+                    "iam:GetRolePolicy",
+                    "iam:GetUserPolicy"
+                ],
+                "Resource": "*",
+                "Effect": "Allow"
+            }
+        ]
+    }
+}

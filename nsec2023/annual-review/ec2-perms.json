@@ -1,0 +1,46 @@
+{
+    "RoleName": "GOD_Ec2Role",
+    "PolicyName": "GOD_EC2S3",
+    "PolicyDocument": {
+        "Version": "2012-10-17",
+        "Statement": [
+            {
+                "Action": [
+                    "secretsmanager:GetSecretValue",
+                    "secretsmanager:DescribeSecret"
+                ],
+                "Resource": [
+                    "arn:aws:secretsmanager:us-east-1:421617763947:secret:GOD_EmployeeAppDebugKey-UnGtvI",
+                    "arn:aws:secretsmanager:us-east-1:421617763947:secret:GOD_ManagerAppDebugKey-HmXuQe"
+                ],
+                "Effect": "Allow"
+            },
+            {
+                "Action": [
+                    "s3:ListBucket"
+                ],
+                "Resource": [
+                    "arn:aws:s3:::mod-a854a8410c7b4c22-gods3corporationbucket-vobcbd4zeti8"
+                ],
+                "Effect": "Allow"
+            },
+            {
+                "Action": [
+                    "s3:GetObject",
+                    "s3:DeleteObject"
+                ],
+                "Resource": [
+                    "arn:aws:s3:::mod-a854a8410c7b4c22-gods3corporationbucket-vobcbd4zeti8/*"
+                ],
+                "Effect": "Allow"
+            },
+            {
+                "Action": [
+                    "s3:ListAllMyBuckets"
+                ],
+                "Resource": "*",
+                "Effect": "Allow"
+            }
+        ]
+    }
+}

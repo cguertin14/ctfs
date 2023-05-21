@@ -1,0 +1,21 @@
+{
+    "RoleName": "GOD_IAM-Manager-Role",
+    "PolicyName": "GOD_AttachCustomPolicies",
+    "PolicyDocument": {
+        "Version": "2012-10-17",
+        "Statement": [
+            {
+                "Condition": {
+                    "ArnEquals": {
+                        "iam:PolicyARN": "arn:aws:iam::*:policy/GOD_Custom*"
+                    }
+                },
+                "Action": [
+                    "iam:AttachUserPolicy"
+                ],
+                "Resource": "*",
+                "Effect": "Allow"
+            }
+        ]
+    }
+}

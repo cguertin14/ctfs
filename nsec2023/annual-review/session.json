@@ -1,0 +1,12 @@
+{
+    "Credentials": {
+        "AccessKeyId": "ASIAWEKTAQZV6GPZ5VJ6",
+        "SecretAccessKey": "0/Zf7YM6WIbchSYzOfWEF0PDg39u91iIrzFLyjFl",
+        "SessionToken": "IQoJb3JpZ2luX2VjEFsaCXVzLWVhc3QtMSJHMEUCIQD13TiZmquCh/KFSkJ2IQTCYPcGGHS3NCYA8Yd/zFbLmQIgAVVbF5p6n/BuIBtlPIJU4fs3vFl5E9Bhlmbn0JCrHkEqmgIIhP//////////ARAAGgw0MjE2MTc3NjM5NDciDBcP2vgnoBw+HQQieyruAVmhz1z3ZwhHrQ3AX559bUlJn/TXQH5Xmb+T68IqblJNIgaxT05MnTpbNQbeqtcktJkDBvk8Znh/2YaJjiBu7oXMT7gKUknp8059c2XdLVQtDOkGdVCSNX1CyGKlJ3BeJhk2ijl+4STe2z789EONR9FUkUDo2QCR4gISB4UnXsoKa+JgkBNIhfJhUEmEPRFqJwbI4K04vkR1iDeBVwKh5IYIMhXYzPtE3aVmxdcgSc8ePED7urDnJNtgva75YiFsSNp+tdWy2CZZR5kT4/LQpMfna4LZMIe1tY0foZdCKZnpxPwd8/FmrVb2faD9tNQwj+ugowY6nQEg65c3pCN187FPNtlKPSch8DnQWo2CeAha9qOjYtCvnqWIClpmGxfzQ1lBhVRbhpvzCBh+bGK67ZquAHXgfJKoyJ76fqaI2ntX8gPsn5bEnCwAPBoAamefkcVkSsaqqHyx/qEEjXY2p6U+JlBkrws8ZEcTMh/e3/Ot5uFV1mH32QyeSSEGmvIBFYfpVFAOzg55QOpnDYiUhshC1yNU",
+        "Expiration": "2023-05-20T03:50:55+00:00"
+    },
+    "AssumedRoleUser": {
+        "AssumedRoleId": "AROAWEKTAQZVVTRSEZVHP:allo",
+        "Arn": "arn:aws:sts::421617763947:assumed-role/GOD_IAM-Manager-Role/allo"
+    }
+}

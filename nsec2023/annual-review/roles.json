@@ -1,0 +1,317 @@
+{
+    "Roles": [
+        {
+            "Path": "/aws-service-role/cloudtrail.amazonaws.com/",
+            "RoleName": "AWSServiceRoleForCloudTrail",
+            "RoleId": "AROAWEKTAQZVWRTDXNVY5",
+            "Arn": "arn:aws:iam::421617763947:role/aws-service-role/cloudtrail.amazonaws.com/AWSServiceRoleForCloudTrail",
+            "CreateDate": "2022-11-25T11:54:06+00:00",
+            "AssumeRolePolicyDocument": {
+                "Version": "2012-10-17",
+                "Statement": [
+                    {
+                        "Effect": "Allow",
+                        "Principal": {
+                            "Service": "cloudtrail.amazonaws.com"
+                        },
+                        "Action": "sts:AssumeRole"
+                    }
+                ]
+            },
+            "MaxSessionDuration": 3600
+        },
+        {
+            "Path": "/aws-service-role/organizations.amazonaws.com/",
+            "RoleName": "AWSServiceRoleForOrganizations",
+            "RoleId": "AROAWEKTAQZVQQRJ33XR7",
+            "Arn": "arn:aws:iam::421617763947:role/aws-service-role/organizations.amazonaws.com/AWSServiceRoleForOrganizations",
+            "CreateDate": "2022-11-25T11:51:05+00:00",
+            "AssumeRolePolicyDocument": {
+                "Version": "2012-10-17",
+                "Statement": [
+                    {
+                        "Effect": "Allow",
+                        "Principal": {
+                            "Service": "organizations.amazonaws.com"
+                        },
+                        "Action": "sts:AssumeRole"
+                    }
+                ]
+            },
+            "Description": "Service-linked role used by AWS Organizations to enable integration of other AWS services with Organizations.",
+            "MaxSessionDuration": 3600
+        },
+        {
+            "Path": "/aws-service-role/support.amazonaws.com/",
+            "RoleName": "AWSServiceRoleForSupport",
+            "RoleId": "AROAWEKTAQZVUOVFBJNFD",
+            "Arn": "arn:aws:iam::421617763947:role/aws-service-role/support.amazonaws.com/AWSServiceRoleForSupport",
+            "CreateDate": "2022-11-25T11:51:04+00:00",
+            "AssumeRolePolicyDocument": {
+                "Version": "2012-10-17",
+                "Statement": [
+                    {
+                        "Effect": "Allow",
+                        "Principal": {
+                            "Service": "support.amazonaws.com"
+                        },
+                        "Action": "sts:AssumeRole"
+                    }
+                ]
+            },
+            "Description": "Enables resource access for AWS to provide billing, administrative and support services",
+            "MaxSessionDuration": 3600
+        },
+        {
+            "Path": "/aws-service-role/trustedadvisor.amazonaws.com/",
+            "RoleName": "AWSServiceRoleForTrustedAdvisor",
+            "RoleId": "AROAWEKTAQZVVVU7HSBE4",
+            "Arn": "arn:aws:iam::421617763947:role/aws-service-role/trustedadvisor.amazonaws.com/AWSServiceRoleForTrustedAdvisor",
+            "CreateDate": "2022-11-25T11:51:04+00:00",
+            "AssumeRolePolicyDocument": {
+                "Version": "2012-10-17",
+                "Statement": [
+                    {
+                        "Effect": "Allow",
+                        "Principal": {
+                            "Service": "trustedadvisor.amazonaws.com"
+                        },
+                        "Action": "sts:AssumeRole"
+                    }
+                ]
+            },
+            "Description": "Access for the AWS Trusted Advisor Service to help reduce cost, increase performance, and improve security of your AWS environment.",
+            "MaxSessionDuration": 3600
+        },
+        {
+            "Path": "/",
+            "RoleName": "EEOrganizations",
+            "RoleId": "AROAWEKTAQZVZJOJF2CN3",
+            "Arn": "arn:aws:iam::421617763947:role/EEOrganizations",
+            "CreateDate": "2022-11-25T11:51:04+00:00",
+            "AssumeRolePolicyDocument": {
+                "Version": "2012-10-17",
+                "Statement": [
+                    {
+                        "Effect": "Allow",
+                        "Principal": {
+                            "AWS": "arn:aws:iam::593341203030:root"
+                        },
+                        "Action": "sts:AssumeRole"
+                    },
+                    {
+                        "Sid": "EEControlPlaneAccountTrust",
+                        "Effect": "Allow",
+                        "Principal": {
+                            "AWS": [
+                                "arn:aws:iam::572239370997:root",
+                                "arn:aws:iam::122334600246:root"
+                            ]
+                        },
+                        "Action": "sts:AssumeRole",
+                        "Condition": {
+                            "StringEquals": {
+                                "sts:ExternalId": "05a3f2ba22f041b4a73bc5bdd3c48e45"
+                            }
+                        }
+                    }
+                ]
+            },
+            "MaxSessionDuration": 3600
+        },
+        {
+            "Path": "/",
+            "RoleName": "EEOverlordRole",
+            "RoleId": "AROAWEKTAQZVZNZW4KRMR",
+            "Arn": "arn:aws:iam::421617763947:role/EEOverlordRole",
+            "CreateDate": "2022-11-25T11:51:21+00:00",
+            "AssumeRolePolicyDocument": {
+                "Version": "2012-10-17",
+                "Statement": [
+                    {
+                        "Sid": "EEControlPlaneAccountTrust",
+                        "Effect": "Allow",
+                        "Principal": {
+                            "AWS": [
+                                "arn:aws:iam::572239370997:root",
+                                "arn:aws:iam::122334600246:root"
+                            ]
+                        },
+                        "Action": "sts:AssumeRole",
+                        "Condition": {
+                            "StringEquals": {
+                                "sts:ExternalId": "05a3f2ba22f041b4a73bc5bdd3c48e45"
+                            }
+                        }
+                    },
+                    {
+                        "Sid": "EEOwnAccountTrust",
+                        "Effect": "Allow",
+                        "Principal": {
+                            "AWS": "arn:aws:iam::421617763947:root"
+                        },
+                        "Action": "sts:AssumeRole"
+                    }
+                ]
+            },
+            "MaxSessionDuration": 43200
+        },
+        {
+            "Path": "/",
+            "RoleName": "GOD_CustomDebugLambdaRole",
+            "RoleId": "AROAWEKTAQZVURYSM2FI7",
+            "Arn": "arn:aws:iam::421617763947:role/GOD_CustomDebugLambdaRole",
+            "CreateDate": "2023-05-19T00:35:16+00:00",
+            "AssumeRolePolicyDocument": {
+                "Version": "2012-10-17",
+                "Statement": [
+                    {
+                        "Effect": "Allow",
+                        "Principal": {
+                            "Service": "lambda.amazonaws.com"
+                        },
+                        "Action": "sts:AssumeRole"
+                    }
+                ]
+            },
+            "Description": "",
+            "MaxSessionDuration": 3600
+        },
+        {
+            "Path": "/",
+            "RoleName": "GOD_Ec2Role",
+            "RoleId": "AROAWEKTAQZVZ5N2XIVBI",
+            "Arn": "arn:aws:iam::421617763947:role/GOD_Ec2Role",
+            "CreateDate": "2023-05-19T00:35:35+00:00",
+            "AssumeRolePolicyDocument": {
+                "Version": "2012-10-17",
+                "Statement": [
+                    {
+                        "Effect": "Allow",
+                        "Principal": {
+                            "Service": "ec2.amazonaws.com"
+                        },
+                        "Action": "sts:AssumeRole"
+                    }
+                ]
+            },
+            "Description": "",
+            "MaxSessionDuration": 3600
+        },
+        {
+            "Path": "/",
+            "RoleName": "GOD_IAM-Manager-Role",
+            "RoleId": "AROAWEKTAQZVVTRSEZVHP",
+            "Arn": "arn:aws:iam::421617763947:role/GOD_IAM-Manager-Role",
+            "CreateDate": "2023-05-19T00:35:51+00:00",
+            "AssumeRolePolicyDocument": {
+                "Version": "2012-10-17",
+                "Statement": [
+                    {
+                        "Effect": "Allow",
+                        "Principal": {
+                            "AWS": "arn:aws:iam::421617763947:user/GOD_svc_iam"
+                        },
+                        "Action": "sts:AssumeRole"
+                    }
+                ]
+            },
+            "Description": "",
+            "MaxSessionDuration": 3600
+        },
+        {
+            "Path": "/",
+            "RoleName": "mod-a854a8410c7b4c22-LambdaRole-87LUBPD1D0I0",
+            "RoleId": "AROAWEKTAQZVU2ANH2NW2",
+            "Arn": "arn:aws:iam::421617763947:role/mod-a854a8410c7b4c22-LambdaRole-87LUBPD1D0I0",
+            "CreateDate": "2023-05-19T00:36:17+00:00",
+            "AssumeRolePolicyDocument": {
+                "Version": "2012-10-17",
+                "Statement": [
+                    {
+                        "Effect": "Allow",
+                        "Principal": {
+                            "Service": "lambda.amazonaws.com"
+                        },
+                        "Action": "sts:AssumeRole"
+                    }
+                ]
+            },
+            "Description": "",
+            "MaxSessionDuration": 3600
+        },
+        {
+            "Path": "/",
+            "RoleName": "nsec_admin_support_role",
+            "RoleId": "AROAWEKTAQZVXGVTHZTXY",
+            "Arn": "arn:aws:iam::421617763947:role/nsec_admin_support_role",
+            "CreateDate": "2023-05-19T00:35:12+00:00",
+            "AssumeRolePolicyDocument": {
+                "Version": "2012-10-17",
+                "Statement": [
+                    {
+                        "Effect": "Allow",
+                        "Principal": {
+                            "AWS": "arn:aws:iam::689075725175:user/nsec_admin_support"
+                        },
+                        "Action": "sts:AssumeRole"
+                    }
+                ]
+            },
+            "Description": "",
+            "MaxSessionDuration": 3600
+        },
+        {
+            "Path": "/",
+            "RoleName": "OpsRole",
+            "RoleId": "AROAWEKTAQZVUO7S6AH32",
+            "Arn": "arn:aws:iam::421617763947:role/OpsRole",
+            "CreateDate": "2023-05-19T00:14:56+00:00",
+            "AssumeRolePolicyDocument": {
+                "Version": "2012-10-17",
+                "Statement": [
+                    {
+                        "Effect": "Allow",
+                        "Principal": {
+                            "AWS": "arn:aws:iam::122334600246:root"
+                        },
+                        "Action": "sts:AssumeRole",
+                        "Condition": {
+                            "StringEquals": {
+                                "sts:ExternalId": "cc07afbeef12472aa933db6fe262ce37"
+                            }
+                        }
+                    },
+                    {
+                        "Effect": "Allow",
+                        "Principal": {
+                            "AWS": "arn:aws:iam::421617763947:user/EEOverlord"
+                        },
+                        "Action": "sts:AssumeRole"
+                    }
+                ]
+            },
+            "MaxSessionDuration": 43200
+        },
+        {
+            "Path": "/",
+            "RoleName": "TeamRole",
+            "RoleId": "AROAWEKTAQZVQ74R3V4OD",
+            "Arn": "arn:aws:iam::421617763947:role/TeamRole",
+            "CreateDate": "2023-05-19T00:15:13+00:00",
+            "AssumeRolePolicyDocument": {
+                "Version": "2012-10-17",
+                "Statement": [
+                    {
+                        "Effect": "Allow",
+                        "Principal": {
+                            "AWS": "arn:aws:iam::421617763947:user/EEOverlord"
+                        },
+                        "Action": "sts:AssumeRole"
+                    }
+                ]
+            },
+            "MaxSessionDuration": 43200
+        }
+    ]
+}

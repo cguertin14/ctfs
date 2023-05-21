@@ -1,0 +1,17 @@
+{
+    "RoleName": "GOD_CustomDebugLambdaRole",
+    "PolicyName": "GOD_LambdaAutomation",
+    "PolicyDocument": {
+        "Version": "2012-10-17",
+        "Statement": [
+            {
+                "Action": [
+                    "secretsmanager:GetSecretValue",
+                    "secretsmanager:DescribeSecret"
+                ],
+                "Resource": "arn:aws:secretsmanager:us-east-1:421617763947:secret:GOD_EmployeeAppDebugKey-UnGtvI",
+                "Effect": "Allow"
+            }
+        ]
+    }
+}
