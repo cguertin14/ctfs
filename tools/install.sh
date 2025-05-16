@@ -64,4 +64,4 @@ go install github.com/ropnop/kerbrute@latest
 git clone https://github.com/sherlock-project/sherlock.git $CTF_BIN/sherlock
 
 # Python packages
-pip3 install pywhat volatility3 web3
+sudo apt install -y python3-pywhat
