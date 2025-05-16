@@ -61,7 +61,7 @@ go install github.com/ffuf/ffuf@latest
 go install github.com/ropnop/kerbrute@latest
 
 # Git repos
-git clone git@github.com:sherlock-project/sherlock.git $CTF_BIN/sherlock
+git clone https://github.com/sherlock-project/sherlock.git $CTF_BIN/sherlock
 
 # Python packages
 pip3 install pywhat volatility3 web3
