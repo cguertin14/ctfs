@@ -32,7 +32,7 @@ if [ ! -f $CTF_BIN/idafree-7.7/ida64 ]
 then
 	wget https://out7.hex-rays.com/files/idafree77_linux.run
 	chmod +x idafree77_linux.run
-	./idafree77_linux.run
+	./idafree77_linux.run --mode unattended
 	rm idafree77_linux.run
 	ln -s $CTF_BIN/idafree-7.7/ida64 $CTF_BIN/idafree
 fi
